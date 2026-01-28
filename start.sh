@@ -54,7 +54,7 @@ setup_nss_wrapper() {
 }
 setup_nss_wrapper
 
-printf '%s\n' "$VNC_PASSWORD" | vncpasswd -f > "$HOME/.vnc/passwd"
+sudo printf '%s\n' "$VNC_PASSWORD" | vncpasswd -f > "$HOME/.vnc/passwd"
 chmod 600 "$HOME/.vnc/passwd"
 
 cat > "$HOME/.vnc/xstartup" <<'XSTART'
