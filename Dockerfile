@@ -19,7 +19,7 @@ RUN set -eux; \
     xfce4-terminal \
     xfconf \
     xfdesktop4 \
-    xfwm4
+    xfwm4 \
     xterm \
     xauth \
     x11-xserver-utils \
