@@ -4,12 +4,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN set -eux; \
   apt-get update; \
-  apt-get install -y --no-install-recommends \
+  apt-get install -y \
     ca-certificates \
     bash \
     nginx-light \
     xfce4-goodies \
     xfce4 \
+    dbus-11 \
     libxfce4ui-utils \
     thunar \
     xfce4-appfinder \
