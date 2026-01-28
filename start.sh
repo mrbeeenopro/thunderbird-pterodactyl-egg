@@ -63,8 +63,8 @@ unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
 export NO_AT_BRIDGE=1
 xsetroot -solid grey
-openbox-session &
-thunderbird --no-remote &
+[ -r "$HOME/.Xresources" ] && xrdb "$HOME/.Xresources"
+startxfce4 &
 XSTART
 chmod +x "$HOME/.vnc/xstartup"
 
