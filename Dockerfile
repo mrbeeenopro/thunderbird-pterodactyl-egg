@@ -8,7 +8,18 @@ RUN set -eux; \
     ca-certificates \
     bash \
     nginx-light \
-    openbox \
+    xfce4-goodies \
+    xfce4 \
+    libxfce4ui-utils \
+    thunar \
+    xfce4-appfinder \
+    xfce4-panel \
+    xfce4-session \
+    xfce4-settings \
+    xfce4-terminal \
+    xfconf \
+    xfdesktop4 \
+    xfwm4
     xterm \
     xauth \
     x11-xserver-utils \
@@ -27,19 +38,6 @@ RUN set -eux; \
     libegl1 \
     libgl1 \
     libgl1-mesa-dri; \
-  mkdir -p /var/lib/openbox; \
-  (update-menus || true); \
-  if [ ! -s /var/lib/openbox/debian-menu.xml ]; then \
-    printf '%s\n' \
-      '<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"' \
-      ' xsi:schemaLocation="http://openbox.org/ file:///usr/share/openbox/menu.xsd">' \
-      '  <menu id="root-menu" label="Applications">' \
-      '    <item label="Terminal"><action name="Execute"><command>xterm</command></action></item>' \
-      '    <item label="Thunderbird"><action name="Execute"><command>thunderbird --no-remote</command></action></item>' \
-      '  </menu>' \
-      '</openbox_menu>' \
-      > /var/lib/openbox/debian-menu.xml; \
-  fi; \
   rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /home/container \
