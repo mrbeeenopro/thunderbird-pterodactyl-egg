@@ -34,6 +34,14 @@ RUN set -eux; \
     python3-xdg \
     xdg-utils \
     menu \
+    curl \
+    htop \
+    firefox-esr \
+    chromium \
+    obs-studio \
+    vlc \
+    btop \
+    neofetch \
     menu-xdg \
     libpci3 \
     libegl1 \
