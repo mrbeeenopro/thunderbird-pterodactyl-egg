@@ -10,7 +10,7 @@ RUN set -eux; \
     nginx-light \
     xfce4-goodies \
     xfce4 \
-    dbus-11 \
+    dbus-x11 \
     libxfce4ui-utils \
     thunar \
     xfce4-appfinder \
