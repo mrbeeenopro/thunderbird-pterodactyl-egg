@@ -76,17 +76,6 @@ RUN set -eux; \
     libreoffice-l10n-vi; \
   rm -rf /var/lib/apt/lists/*
 
-
-RUN set -eux; \
-  dpkg --add-architecture i386; \
-  apt-get update; \
-  apt-get install -y \
-    wine \
-    wine32 \
-    wine64 \
-    winetricks; \
-  rm -rf /var/lib/apt/lists/*
-
 RUN set -eux; \
   apt-get update; \
   apt-get install -y wget gpg; \
