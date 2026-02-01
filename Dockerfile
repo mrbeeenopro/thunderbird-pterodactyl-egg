@@ -88,15 +88,6 @@ RUN set -eux; \
 
 RUN set -eux; \
   apt-get update; \
-  apt-get install -y openjdk-17-jdk; \
-  mkdir -p /opt; \
-  wget -O /tmp/as.tar.gz https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2024.1.1.11/android-studio-2024.1.1.11-linux.tar.gz; \
-  tar -xzf /tmp/as.tar.gz -C /opt; \
-  ln -s /opt/android-studio/bin/studio.sh /usr/local/bin/android-studio; \
-  rm /tmp/as.tar.gz
-
-RUN set -eux; \
-  apt-get update; \
   apt-get install -y git; \
   mkdir -p /usr/share/themes /usr/share/icons; \
   git clone https://github.com/h3l2f/lememStuff /tmp/lemem; \
